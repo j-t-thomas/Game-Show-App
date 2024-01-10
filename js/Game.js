@@ -56,7 +56,7 @@ class Game {
         // Update hearts based on the number of misses
         for (let i = 0; i < this.missed; i++) {
             hearts[i].classList.remove('tries');
-            hearts[i].firstChild.src = 'images/lostHeart.png';
+            hearts[i].firstElementChild.src = 'images/lostHeart.png';
         }
     
         if (this.missed === 5) {
@@ -102,7 +102,7 @@ class Game {
         document.querySelectorAll('#scoreboard ol li').forEach(heart => {
             // Reset and set the image to a live heart
             heart.classList.add('tries');
-            heart.firstChild.src = 'images/liveHeart.png';
+            heart.firstElementChild.src = 'images/liveHeart.png';
         })
     }
 
